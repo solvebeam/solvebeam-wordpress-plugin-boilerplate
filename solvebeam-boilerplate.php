@@ -23,6 +23,8 @@
  * GitHub URI:        https://github.com/solvebeam/solvebeam-wordpress-plugin-boilerplate
  */
 
+declare(strict_types=1);
+
 namespace SolveBeam\WordPressPluginBoilerplate;
 
 if ( ! defined( 'ABSPATH' ) ) {

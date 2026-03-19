@@ -8,6 +8,8 @@
  * @package   SolveBeam\WordPressPluginBoilerplate
  */
 
+declare(strict_types=1);
+
 namespace SolveBeam\WordPressPluginBoilerplate;
 
 /**
