@@ -62,13 +62,13 @@
 			"rm -rf ./build",
 			"mkdir ./build",
 			"mkdir ./build/stage-1",
-			"mkdir ./build/stage-2",
+			"mkdir ./build/solvebeam-boilerplate",
 			"rsync --recursive --verbose --exclude-from=.distignore --exclude=/vendor/ ./ ./build/stage-1/",
 			"composer install --no-dev --prefer-dist --optimize-autoloader --working-dir=./build/stage-1/",
-			"rsync --recursive --verbose --exclude-from=.distignore ./build/stage-1/ ./build/stage-2/",
-			"vendor/bin/wp i18n make-pot ./build/stage-2/ --slug=solvebeam-boilerplate",
-			"vendor/bin/wp i18n make-mo ./build/stage-2/languages/",
-			"vendor/bin/wp dist-archive ./build/stage-2/ --plugin-dirname=solvebeam-boilerplate"
+			"rsync --recursive --verbose --exclude-from=.distignore ./build/stage-1/ ./build/solvebeam-boilerplate/",
+			"vendor/bin/wp i18n make-pot ./build/solvebeam-boilerplate/ --slug=solvebeam-boilerplate",
+			"vendor/bin/wp i18n make-mo ./build/solvebeam-boilerplate/languages/",
+			"vendor/bin/wp dist-archive ./build/solvebeam-boilerplate/ --plugin-dirname=solvebeam-boilerplate"
 		],
 		"dist-archive": "wp dist-archive . --plugin-dirname=solvebeam-boilerplate",
 		"make-pot": [
