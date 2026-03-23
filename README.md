@@ -110,6 +110,7 @@ solvebeam-boilerplate/
 ├── package.json
 ├── .wp-env.json
 ├── .editorconfig
+├── .gitattributes
 ├── .distignore
 ├── README.md
 ├── CHANGELOG.md
