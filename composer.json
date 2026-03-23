@@ -32,8 +32,7 @@
 			"php": "8.3"
 		},
 		"platform-check": false,
-		"sort-packages": true,
-		"wp-slug": "solvebeam-boilerplate"
+		"sort-packages": true
 	},
 	"require": {
 		"php": "^8.3",
@@ -55,7 +54,8 @@
 				"vendor:wp-pay",
 				"woocommerce/action-scheduler"
 			]
-		}
+		},
+		"wp-slug": "solvebeam-boilerplate"
 	},
 	"scripts": {
 		"build": [
