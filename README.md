@@ -68,6 +68,16 @@ composer run phpcs
 composer run rector
 ```
 
+Optional development tools that may be useful, but are not included by default in this boilerplate for now:
+
+#### Psalm
+
+[Psalm](https://github.com/vimeo/psalm/) can be used for static analysis. See the [Psalm documentation](https://psalm.dev/) for setup and usage.
+
+#### Slevomat Coding Standard
+
+[Slevomat Coding Standard](https://github.com/slevomat/coding-standard) can be used for additional PHPCS sniffs.
+
 ## Architecture & Conventions
 
 This boilerplate follows the [SolveBeam Plugin Development Guidelines](https://github.com/solvebeam). Key conventions that may not be immediately obvious:
