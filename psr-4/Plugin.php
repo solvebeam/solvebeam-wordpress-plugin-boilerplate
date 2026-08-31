@@ -46,7 +46,7 @@ final class Plugin {
 		/**
 		 * Plugin file.
 		 */
-		private string $plugin_file
+		private readonly string $plugin_file
 	) {
 		\add_action( 'plugins_loaded', $this->plugins_loaded( ... ) );
 	}
