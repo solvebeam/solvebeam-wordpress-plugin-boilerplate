@@ -47,6 +47,20 @@ The build uses a **two-stage rsync** process:
 
 The final distributable ZIP is created from `build/stage-2/`.
 
+### Translations
+
+Use the existing i18n scripts to keep translation files in sync:
+
+```sh
+composer run make-pot
+```
+
+After updating the POT/PO files, AI can be useful for filling untranslated strings in a locale file, for example:
+
+```text
+Can you translate the untranslated texts in languages/solvebeam-boilerplate-nl_NL.po?
+```
+
 ### Linting & analysis
 
 ```sh
