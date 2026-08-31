@@ -1,7 +1,7 @@
 {
 	"name": "@solvebeam/solvebeam-wordpress-plugin-boilerplate",
 	"version": "1.0.0",
-	"description": "Override the default customer location used by WooCommerce for taxes, pricing, and checkout.",
+	"description": "A modern WordPress plugin boilerplate by SolveBeam, providing a structured foundation for building scalable and maintainable plugins.",
 	"author": "SolveBeam",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
