@@ -24,9 +24,10 @@
 	],
 	"config": {
 		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"automattic/jetpack-autoloader": true,
 			"composer/installers": true,
-			"automattic/jetpack-autoloader": true
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"phpstan/extension-installer": true
 		},
 		"platform": {
 			"php": "8.3"
@@ -40,9 +41,12 @@
 		"automattic/jetpack-autoloader": "^5.0"
 	},
 	"require-dev": {
+		"phpstan/extension-installer": "^1.4",
+		"phpstan/phpstan": "^2.2",
 		"pronamic/wp-coding-standards": "^2.5",
 		"rector/rector": "^2.6",
 		"roots/wordpress-no-content": "^6.9",
+		"szepeviktor/phpstan-wordpress": "^2.0",
 		"wp-cli/dist-archive-command": "*",
 		"wp-cli/wp-cli-bundle": "*"
 	},
@@ -73,6 +77,9 @@
 			"@build",
 			"rsync --recursive --delete --verbose ./build/solvebeam-boilerplate/languages/ ./languages/",
 			"vendor/bin/wp i18n update-po ./languages/solvebeam-boilerplate.pot"
-		]
+		],
+		"phpcs": "vendor/bin/phpcs",
+		"phpcbf": "vendor/bin/phpcbf",
+		"phpstan": "vendor/bin/phpstan analyse --memory-limit=-1"
 	}
 }
