@@ -63,10 +63,10 @@ final class Plugin {
 	/**
 	 * Add plugin action links.
 	 *
-	 * @param array $links The existing links.
-	 * @return array The modified links.
+	 * @param array<string> $links The existing links.
+	 * @return array<string> The modified links.
 	 */
-	public function add_plugin_action_links( $links ) {
+	public function add_plugin_action_links( array $links ): array {
 		$settings_link = \sprintf(
 			'<a href="%s">%s</a>',
 			\esc_url( '#' ),
