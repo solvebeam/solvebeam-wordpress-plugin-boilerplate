@@ -81,16 +81,25 @@ All classes live directly under a single namespace (e.g. `SolveBeam\WordPressPlu
 
 `psr-4/Plugin.php` must be `final`, use a private constructor, and expose a single `public static function instance(): self` entry point. Hooks are registered internally from the constructor.
 
+### Fully qualified function calls
+
+Always call WordPress and built-in PHP functions with a fully qualified name (FQN), using a leading backslash. In namespaced code, this avoids namespace resolution and makes it clear that the global function is being called.
+
+```php
+\add_action( 'init', $this->init( ... ) );
+\sprintf( 'Plugin: %s', $name );
+```
+
 ### First-class callable syntax for hooks
 
 Always use PHP 8.1+ first-class callable syntax for hook callbacks:
 
 ```php
 // ✅ Correct
-add_action( 'init', $this->init( ... ) );
+\add_action( 'init', $this->init( ... ) );
 
 // ❌ Never use array syntax
-add_action( 'init', [ $this, 'init' ] );
+\add_action( 'init', [ $this, 'init' ] );
 ```
 
 ### Comments
