@@ -26,10 +26,10 @@ final class Plugin {
 	/**
 	 * Return instance of this class.
 	 *
-	 * @param string|null $plugin_file The plugin file.
+	 * @param string $plugin_file The plugin file.
 	 * @return self A single instance of this class.
 	 */
-	public static function instance( $plugin_file = null ) {
+	public static function instance( string $plugin_file ) {
 		if ( null === self::$instance ) {
 			self::$instance = new self( $plugin_file );
 		}
