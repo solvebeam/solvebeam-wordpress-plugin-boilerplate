@@ -29,16 +29,12 @@ namespace SolveBeam\WordPressPluginBoilerplate;
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-/**
- * Autoload.
- */
-$autoload_path = __DIR__ . '/vendor/autoload_packages.php';
+( static function (): void {
+	$autoload_path = __DIR__ . '/vendor/autoload_packages.php';
 
-if ( \file_exists( $autoload_path ) ) {
-	require_once $autoload_path;
-}
+	if ( \file_exists( $autoload_path ) ) {
+		require_once $autoload_path;
+	}
 
-/**
- * Bootstrap.
- */
-Plugin::instance( __FILE__ );
+	Plugin::instance( __FILE__ );
+} )();
