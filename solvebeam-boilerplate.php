@@ -41,11 +41,4 @@ if ( \file_exists( $autoload_path ) ) {
 /**
  * Bootstrap.
  */
-\add_action(
-	'plugins_loaded',
-	function () {
-		\load_plugin_textdomain( 'solvebeam-boilerplate', false, \dirname( \plugin_basename( __FILE__ ) ) . '/languages' );
-	}
-);
-
 Plugin::instance( __FILE__ );
